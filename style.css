@@ -1,0 +1,101 @@
+body{
+
+}
+
+
+.section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: antiquewhite;
+
+}
+
+.section1-big{
+    
+    font-size: 160px;
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 125;
+}
+
+.section1-small{
+
+    font-size: 30px;
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 125;
+}
+
+#section1smalltext1{
+    transform: translateY(100px);
+}
+
+#section1smalltext2{
+    transform: translateY(-100px);
+}
+
+.concerns{
+    background-color: rgb(246, 246, 246);
+    
+}
+
+.section1-image,
+.section2-image,
+.section3-image,
+.section4-image,
+.my-picture{
+    width: 400px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.text {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding-top: 200px; /* Reduce padding for a tighter layout */
+    
+}
+
+.text-big {
+    width: 700px; /* Adjust to fit content more compactly */
+    font-size: 60px;
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 850;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: left; /* Center-align text */
+}
+
+.text-small {
+    width: 600px; /* Adjust to fit content more compactly */
+    font-size: 40px;
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: left; /* Center-align text */
+}
+
+.custom-underline {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: rgba(232, 54, 0, 1);
+    text-decoration-thickness: 8px;
+  }
+
+
