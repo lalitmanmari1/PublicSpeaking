@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Info Session + First Class Free Sign-Up</div>
+        <form action="https://sheetdb.io/api/v1/kul6moc6kn9o4" method="post" id="sheetdb-form">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Student First Name</span>
+                    <input type="text" name="data[student_first_name]" placeholder="Enter First Name" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Student Last Name</span>
+                    <input type="text" name="data[student_last_name]" placeholder="Enter Last Name" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Student Age</span>
+                    <input type="number" name="data[age]" id="student-age" placeholder="Enter Age" required onchange="toggleFields()">
+                </div>
+
+                <div id="parent-info" style="display: none;">
+                    <div class="input-box">
+                        <span class="details">Parent/Guardian Name</span>
+                        <input type="text" name="data[parent_name]" id="parent-name" placeholder="Enter Parent/Guardian Name">
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="input-box">
+                        <span class="details">Parent/Guardian Email</span>
+                        <input type="text" name="data[parent_email]" id="parent-contact" placeholder="Enter Parent/Guardian Contact Info">
+                    </div>
+
+                    <div class="spacer"></div>
+
+
+                    <div class="input-box">
+                        <span class="details">Parent/Guardian Phone Number</span>
+                        <input type="text" name="data[parent_phone]" id="parent-contact" placeholder="Enter Parent/Guardian Contact Info">
+                    </div>
+                </div>
+
+                <div id="student-contact-info">
+                    <div class="input-box">
+                        <span class="details">Student Email</span>
+                        <input type="email" name="data[student_email]" id="student-email" placeholder="Enter Student Email">
+                    </div>
+
+                    <div class="spacer"></div>
+
+
+                    <div class="input-box">
+                        <span class="details">Student Phone Number</span>
+                        <input type="text" name="data[student_phone]" id="student-phone" placeholder="Enter Student Phone Number">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Attending the Info Session</span>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="data[attending]" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="data[attending]" value="no" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleFields() {
+            const age = document.getElementById("student-age").value;
+            const parentInfo = document.getElementById("parent-info");
+            const studentEmail = document.getElementById("student-email");
+            const studentPhone = document.getElementById("student-phone");
+
+            if (age < 18) {
+                parentInfo.style.display = "block";
+                parentInfo.querySelectorAll("input").forEach(input => input.required = true);
+                studentEmail.required = false;
+                studentPhone.required = false;
+            } else {
+                parentInfo.style.display = "none";
+                parentInfo.querySelectorAll("input").forEach(input => input.required = false);
+                studentEmail.required = true;
+                studentPhone.required = true;
+            }
+        }
+    </script>
+
+<script>
+    var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    window.open('index.html', '_blank');
+
+  });
+});
+</script>
+    
+</body>
+</html>
