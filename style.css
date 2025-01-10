@@ -1,10 +1,8 @@
 body {
     margin: 0;
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    min-height: 100vh; /* Ensures full viewport height */
-    flex-direction: column; /* Stacks sections vertically */
+    height: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .section1 {
@@ -12,109 +10,146 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
-    max-width: 500px;
-    background-color: antiquewhite;
-    padding: 20px; /* Add padding for spacing */
     height: 100vh;
-    width: 100vh;
+    background-color: antiquewhite;
+    line-height: 0.1;
+    font-family: "Archivo", serif;
 }
 
 .section1-big {
-    font-size: 70px;
-    font-family: "Archivo", serif;
+    font-size: clamp(80px, 10vw, 160px); /* Responsive scaling with limits */
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     font-variation-settings: "wdth" 125;
 }
 
+
+
 .section1-small {
-    font-size: 20px;
-    font-family: "Archivo", serif;
+    font-size: clamp(20px, 3vw, 30px); /* Responsive scaling with limits */
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     font-variation-settings: "wdth" 125;
+}
+
+#section1smalltext2{
+    padding-bottom: 60px;
 }
 
 .concerns {
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(243, 240, 238);
+    
 }
 
-.button-container {
+.button {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    align-items: center; /* Center the buttons vertically */
-    gap: 20px; /* Add some space between buttons */
-    margin-top: 20px;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+    gap: 20px; /* Space between buttons */
 }
 
-.class-button, .final-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    background-color: #e84f00;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    font-family: "Archivo", serif;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    transition: background 0.3s ease;
+
+.class-button, .first-button { /* Apply styles to both .class-button and .first-button */
+    padding: 15px 30px; /* Adjust padding for better button size */
+    font-size: 18px; /* Increase font size for readability */
+    font-family: "Archivo", serif; /* Use the same font family as the rest of the site */
+    font-weight: 700; /* Make text bold */
+    text-transform: uppercase; /* Uppercase text for a more modern look */
+    border-radius: 50px; /* Rounded corners */
+    background: linear-gradient(135deg, antiquewhite, #894933);
+    color: white; /* White text for contrast */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+    margin-top: 20px; /* Add margin to create space between the button and the text */
 }
 
-.class-button:hover, .final-button:hover {
-    background: linear-gradient(135deg, #9b59b6, #71b7e6);
+.class-button:hover, .first-button:hover { /* Apply hover effect to both .class-button and .first-button */
+    background-color: #D73700; /* Darker shade of the background color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    background: linear-gradient(135deg, #894933, antiquewhite);
 }
 
-.section1-image, .section2-image, .section3-image, .section4-image, .my-picture {
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding-left: 5%;
-    display: block; /* Makes the image block-level */
-    margin: 0 auto; /* Centers the image horizontally */
+.class-button:active, .first-button:active { /* Apply active effect to both .class-button and .first-button */
+    background-color: #C12D00; /* Even darker shade when clicked */
+    transform: translateY(1px); /* Button appears pressed */
+}
+
+.class-button:focus, .first-button:focus { /* Apply focus effect to both .class-button and .first-button */
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 10px rgba(232, 54, 0, 0.6); /* Add a subtle glow on focus */
+}
+.first-button{
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+    gap: 20px; /* Space between buttons */
+}
+
+
+
+
+
+.section1-image,
+.section2-image,
+.section3-image,
+.section4-image,
+.my-picture {
+    width: 400px; /* Default size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .text {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
+    flex-direction: row; /* Horizontal layout by default */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between text and image */
+    padding-top: 300px; /* Adjust padding */
 }
 
 .text-big {
-    width: 400px;
-    font-size: 60px;
+    width: 700px; /* Fixed width for larger screens */
+    font-size: 60px; /* Default font size */
     font-family: "Archivo", serif;
     font-optical-sizing: auto;
     font-weight: 850;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    text-align: left;
-    padding-left: 5%;
+    text-align: left; /* Align text to the left */
 }
 
 .text-small {
-    margin-top: 0;
-    padding-top: 0;
-    width: 400px;
-    font-size: 40px;
+    width: 600px; /* Fixed width for smaller text */
+    font-size: 40px; /* Default font size */
     font-family: "Archivo", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    text-align: left;
-    padding-left: 5%;
+    text-align: left; /* Align text to the left */
+}
+
+.nopicture {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
+  
+}
+
+.nopicture h2 {
+    text-align: center; /* Ensure titles are centered */
+}
+
+.nopicture p {
+  
+    text-align: center; /* Center-align smaller text */
 }
 
 .custom-underline {
@@ -124,59 +159,76 @@ body {
     text-decoration-thickness: 8px;
 }
 
-.image-layout {
+.section5-content {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
+    gap: 20px; /* Add spacing between elements */
+    padding: 20px; /* Optional padding for spacing */
 }
 
-.image-layout .image-box {
-    text-align: center;
-    width: 150px;
-}
-
-.image-layout .image-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.image-layout .image-box .caption {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
-    font-weight: 500;
-}
-
-.final-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.final-button {
-    padding: 20px 40px;
-    font-size: 24px;
-    background-color: #e84f00;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    text-decoration: none;
+.section5-content h2 {
+    font-size: 60px; /* Adjust font size for titles */
     font-family: "Archivo", serif;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-    border-radius: 10px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    font-weight: 850;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center; /* Ensure titles are centered */
 }
 
-.final-button:hover {
-    background: linear-gradient(135deg, #9b59b6, #71b7e6);
+.section5-content .text-small {
+    font-size: 40px; /* Adjust font size for text */
+    font-family: "Archivo", serif;
+    font-weight: 400;
+    text-align: center; /* Center-align smaller text */
 }
+
+.section5-content img {
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+@media (max-width: 1160px) {
+    
+    .text {
+        flex-direction: column; /* Stack text and image vertically */
+        padding-top: 50px; /* Reduce padding */
+        align-items: center; /* Center items vertically */
+        text-align: center; /* Ensure text alignment */
+        padding-top: 200px;
+    }
+
+    .class-button{
+        padding: 15px 30px; /* Adjust padding for better button size */
+        font-size: 1.5vh; /* Increase font size for readability */
+       
+    }
+
+    .section1-image,
+    .section2-image,
+    .section3-image,
+    .section4-image,
+    .my-picture {
+        width: 100%; /* Scale image to fit the screen */
+        max-width: 400px; /* Restrict maximum size */
+        margin-top: 20px; /* Add spacing between text and image */
+    }
+
+    .text-big {
+        font-size: 50px; /* Scale text size with screen width */
+        width: 450px; /* Allow text to scale dynamically */
+        text-align: center; /* Center-align text */
+    }
+
+    .text-small {
+        font-size: 40px; /* Scale text size with screen width */
+        width: 450px; /* Allow text to scale dynamically */
+        text-align: center; /* Center-align text */
+    }
+}
+
+

@@ -13,7 +13,7 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 10px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(135deg, antiquewhite, #894933);
 }
 
 .container {
@@ -119,7 +119,7 @@ body {
 .button button {
     width: 100%;
     height: 45px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(135deg, antiquewhite, #894933);
     border: none;
     border-radius: 10px;
     font-size: 16px;
@@ -130,6 +130,6 @@ body {
 }
 
 .button button:hover {
-    background: linear-gradient(135deg, #9b59b6, #71b7e6);
+    background: linear-gradient(135deg, #894933, antiquewhite);
 }
 
