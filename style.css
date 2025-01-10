@@ -199,6 +199,13 @@ body {
         align-items: center; /* Center items vertically */
         text-align: center; /* Ensure text alignment */
         padding-top: 200px;
+        display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
+    gap: 20px; /* Add spacing between elements */
+    padding: 20px; /* Optional padding for spacing */
     }
 
     .class-button{
