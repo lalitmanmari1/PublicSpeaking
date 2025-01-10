@@ -226,7 +226,7 @@ body {
 
     .text-small {
         font-size: 40px; /* Scale text size with screen width */
-        width: 400px; /* Allow text to scale dynamically */
+        width: 200px; /* Allow text to scale dynamically */
         text-align: center; /* Center-align text */
     }
 }
