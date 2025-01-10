@@ -58,7 +58,7 @@ body {
     font-weight: 700; /* Make text bold */
     text-transform: uppercase; /* Uppercase text for a more modern look */
     border-radius: 50px; /* Rounded corners */
-    background: linear-gradient(135deg, #894933, #894933);
+    background: linear-gradient(135deg, antiquewhite, #894933);
     color: white; /* White text for contrast */
     border: none; /* Remove default border */
     cursor: pointer; /* Change cursor to pointer for interactivity */
