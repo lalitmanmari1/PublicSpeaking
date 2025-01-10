@@ -110,7 +110,7 @@ body {
     align-items: center; /* Center vertically */
     gap: 20px; /* Space between text and image */
     padding-top: 300px; /* Adjust padding */
-    text-align: center;
+    text-align: left;
 }
 
 .text-big {
@@ -198,8 +198,8 @@ body {
         flex-direction: column; /* Stack text and image vertically */
         padding-top: 50px; /* Reduce padding */
         align-items: center; /* Center items vertically */
-        text-align: center; /* Ensure text alignment */
         padding-top: 200px;
+        text-align: center;
     }
 
     .class-button{
