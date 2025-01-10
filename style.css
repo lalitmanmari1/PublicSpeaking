@@ -219,7 +219,7 @@ body {
 
     .text-big {
         font-size: 50px; /* Scale text size with screen width */
-        width: 400px; /* Allow text to scale dynamically */
+        width: 450px; /* Allow text to scale dynamically */
         text-align: center; /* Center-align text */
     }
 
