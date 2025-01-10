@@ -110,6 +110,7 @@ body {
     align-items: center; /* Center vertically */
     gap: 20px; /* Space between text and image */
     padding-top: 300px; /* Adjust padding */
+    text-align: center;
 }
 
 .text-big {
@@ -120,7 +121,7 @@ body {
     font-weight: 850;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    text-align: left; /* Align text to the left */
+    /* Align text to the left */
 }
 
 .text-small {
@@ -131,7 +132,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    text-align: left; /* Align text to the left */
+     /* Align text to the left */
 }
 
 .nopicture {
@@ -220,13 +221,13 @@ body {
     .text-big {
         font-size: 50px; /* Scale text size with screen width */
         width: 400px; /* Allow text to scale dynamically */
-        text-align: center; /* Center-align text */
+        /* Center-align text */
     }
 
     .text-small {
         font-size: 40px; /* Scale text size with screen width */
         width: 400px; /* Allow text to scale dynamically */
-        text-align: center; /* Center-align text */
+         /* Center-align text */
     }
 }
 
