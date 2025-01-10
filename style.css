@@ -58,7 +58,7 @@ body {
     font-weight: 700; /* Make text bold */
     text-transform: uppercase; /* Uppercase text for a more modern look */
     border-radius: 50px; /* Rounded corners */
-    background: linear-gradient(135deg, aqua, #894933);
+    background: linear-gradient(135deg, antiquewhite, #894933);
     color: white; /* White text for contrast */
     border: none; /* Remove default border */
     cursor: pointer; /* Change cursor to pointer for interactivity */
@@ -193,7 +193,6 @@ body {
 
 
 @media (max-width: 1160px) {
-    
     .text {
         flex-direction: column; /* Stack text and image vertically */
         padding-top: 50px; /* Reduce padding */
@@ -220,13 +219,13 @@ body {
 
     .text-big {
         font-size: 50px; /* Scale text size with screen width */
-        width: 50px; /* Allow text to scale dynamically */
+        width: 400px; /* Allow text to scale dynamically */
         text-align: center; /* Center-align text */
     }
 
     .text-small {
         font-size: 40px; /* Scale text size with screen width */
-        width: 50px; /* Allow text to scale dynamically */
+        width: 400px; /* Allow text to scale dynamically */
         text-align: center; /* Center-align text */
     }
 }
