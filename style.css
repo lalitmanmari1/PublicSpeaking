@@ -199,13 +199,6 @@ body {
         align-items: center; /* Center items vertically */
         text-align: center; /* Ensure text alignment */
         padding-top: 200px;
-        display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center-align text */
-    gap: 20px; /* Add spacing between elements */
-    padding: 20px; /* Optional padding for spacing */
     }
 
     .class-button{
@@ -226,7 +219,7 @@ body {
 
     .text-big {
         font-size: 50px; /* Scale text size with screen width */
-        width: 450px; /* Allow text to scale dynamically */
+        width: 400px; /* Allow text to scale dynamically */
         text-align: center; /* Center-align text */
     }
 
