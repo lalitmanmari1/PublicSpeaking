@@ -11,33 +11,13 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        /* Centering the arrow button */
-        .arrow-button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .arrow-button {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: black;
-        }
-
-        .arrow {
-            display: block;
-            line-height: 10px;
-        }
-    </style>
+    
 </head>
 <body>
+    <!-- Sticky Navigation Bar -->
+    <div id="sticky-nav">
+        <a href="form.html" class="first-button">Get Started</a>
+    </div>
 
     <div class="section1 flex" id="section">
         <div class="section1-content">
@@ -66,7 +46,8 @@
                 <p class="text-small">
                     Starting a public speaking class for kids ages <span class="custom-underline">13-18</span> is an exciting opportunity to help young people build confidence, improve communication skills, and conquer stage fright. Sign up by January 20 and enjoy your <span class="custom-underline">first class for free!</span> After that it's just <span class="custom-underline">$10/hour</span>.
                 </p>
-                <!-- Arrow Button -->
+            </div>
+            <!-- Arrow Button -->
             <div class="arrow-button-container">
                 <button class="arrow-button" onclick="scrollToSection('section2')">
                     <span class="arrow">▽</span>
@@ -74,14 +55,13 @@
                     <span class="arrow">▽</span>
                 </button>
             </div>
-            </div>
         </div>
 
         <div class="text" id="section2" data-aos="fade-up" data-aos-duration="1000">
             <div class="section2-content">
                 <h2 class="text-big">It's Just Talking</h2>
                 <p class="text-small">
-                    That’s right—it’s just talking. But if it’s so simple, <span class="custom-underline">why doesn’t everyone do it?</span> Because talking isn’t always as easy as it seems.
+                    That's right—it's just talking. But if it's so simple, <span class="custom-underline">why doesn't everyone do it?</span> Because talking isn't always as easy as it seems.
                 </p>
             </div>
             <img src="images/image1.jpeg" alt="Speaking Image" class="section2-image">
@@ -99,10 +79,17 @@
             <div class="section3-content">
                 <h2 class="text-big">It's Too Scary</h2>
                 <p class="text-small">
-                    Unfortunately, that’s the biggest problem. <span class="custom-underline">Fear</span>. The <span class="custom-underline">Fear</span> of humiliation. The <span class="custom-underline">Fear</span> of messing up. <span class="custom-underline">Fear</span> due to lack of experience.
+                    Unfortunately, that's the biggest problem. <span class="custom-underline">Fear</span>. The <span class="custom-underline">Fear</span> of humiliation. The <span class="custom-underline">Fear</span> of messing up. <span class="custom-underline">Fear</span> due to lack of experience.
                 </p>
             </div>
             <img src="images/image2.jpeg" alt="Fear Image" class="section3-image">
+            <div class="arrow-button-container">
+                <button class="arrow-button" onclick="scrollToSection('section4')">
+                    <span class="arrow">▽</span>
+                    <span class="arrow">▽</span>
+                    <span class="arrow">▽</span>
+                </button>
+            </div>
         </div>
 
         <div class="text" id="section4" data-aos="fade-up" data-aos-duration="1000">
@@ -166,12 +153,11 @@
                     Learn to handle high-pressure environments and improvise on the spot. This is at a Mock Trial competition, where my team and I competed against 30+ schools across the U.S.
                 </p>
             </div>
+            <!-- Arrow Button -->
             
         </div>
 
-        <div>
-            <a href="form.html" class="first-button">Get Started</a>
-        </div>
+        
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -186,7 +172,22 @@
                 section.scrollIntoView({ behavior: 'smooth' });
             }
         }
-    </script>
 
+        // New script for sticky navigation
+        document.addEventListener('scroll', function() {
+            const stickyNav = document.getElementById('sticky-nav');
+            const firstSection = document.querySelector('.section1');
+            
+            // Get the height of the first section
+            const firstSectionHeight = firstSection.offsetHeight;
+            
+            // Check if user has scrolled past the first section
+            if (window.scrollY > firstSectionHeight) {
+                stickyNav.style.top = '0';
+            } else {
+                stickyNav.style.top = '-100px';
+            }
+        });
+    </script>
 </body>
 </html>
