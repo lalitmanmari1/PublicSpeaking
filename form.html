@@ -72,8 +72,7 @@
     </div>
 
     <script>
-        // Set signup date when page loads
-        document.getElementById('signup-date').value = new Date().toISOString().split('T')[0];
+        document.getElementById('signup-date').value =  new Date().toISOString().split('T')[0];
 
         function toggleFields() {
             const age = document.getElementById("student-age").value;
@@ -128,7 +127,7 @@
             }).then(
                 response => response.json()
             ).then((html) => {
-                window.open('index.html', '_blank');
+                window.location.href = 'index.html';
             });
         });
     </script>
